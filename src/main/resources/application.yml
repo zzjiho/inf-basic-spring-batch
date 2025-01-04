@@ -1,0 +1,13 @@
+spring:
+  batch:
+    job:
+      names: ${job.name:NONE} # job 실행시 job 이름을 파라미터로 넘기기 위함
+    jdbc:
+      initialize-schema: always
+  datasource:
+      url: jdbc:mysql://localhost:3307/spring_batch?useSSL=false
+      username:
+      password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
